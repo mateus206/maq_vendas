@@ -9,7 +9,7 @@ public class Produto
 {
     private String nome;
     private double preco;
-    private int qt_disp;
+    private int quantidade;
     private String img;
     /**
      * Construtor para objetos da classe Produto
@@ -19,7 +19,23 @@ public class Produto
         // inicializa variáveis de instância
         this.nome = nome;
         this.preco = preco;
-        this.qt_disp = qt_disp;
+        this.quantidade = quantidade;
         this.img = img;
     }
+    
+    public double getpreco()
+    {
+        return preco;
+    }
+    
+    public int getquantidade()
+    {
+        return quantidade;
+    }
+    
+    public String getimg()
+    {
+        return img;
+    }
+    
 }
