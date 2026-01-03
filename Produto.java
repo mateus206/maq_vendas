@@ -23,6 +23,10 @@ public class Produto
         this.img = img;
     }
     
+    public String getNome() {
+        return nome;
+    }
+     
     public double getpreco()
     {
         return preco;
@@ -38,4 +42,14 @@ public class Produto
         return img;
     }
     
+    public boolean comprar() {
+        if (quantidade > 0) {
+            quantidade--;
+            return true;
+        }
+        return false;
+    }
 }
+    
+    
+
