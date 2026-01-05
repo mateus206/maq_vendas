@@ -19,7 +19,7 @@ public class Produto
         // inicializa variáveis de instância
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = quantidade;
+        this.quantidade = qt_disp;
         this.img = img;
     }
     
@@ -27,12 +27,12 @@ public class Produto
         return nome;
     }
      
-    public double getpreco()
+    public double getPreco()
     {
         return preco;
     }
     
-    public int getquantidade()
+    public int getQuantidade()
     {
         return quantidade;
     }

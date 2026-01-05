@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Escreva uma descrição da classe MaquinaVendas aqui.
  * 
@@ -8,15 +8,16 @@
 public class MaquinaVendas
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
-
+    private String nome;
+    private ArrayList<Produto> produtosDisponiveis;
     /**
      * Construtor para objetos da classe MaquinaVendas
      */
-    public MaquinaVendas()
+    public MaquinaVendas(String nome, ArrayList<Produto> produtos)
     {
         // inicializa variáveis de instância
-        x = 0;
+        this.nome = nome;
+        this.produtosDisponiveis = produtos;
     }
 
     /**
@@ -25,9 +26,39 @@ public class MaquinaVendas
      * @param  y   um exemplo de um parâmetro de método
      * @return     a soma de x e y 
      */
-    public int sampleMethod(int y)
+    public boolean existeProduto(String nome)
     {
         // escreva seu código aqui
-        return x + y;
+        int i = 0;
+        boolean encontrado = false;
+        while  (i < produtosDisponiveis.size() && encontrado == false)
+        {
+            String nomeProduto = produtosDisponiveis.get(i).getNome();
+            if (nomeProduto.equals(nome))
+            encontrado = true;
+            else i++;
+        }
+        return encontrado;
+    }
+    
+    public boolean venderProduto(String nome)
+    {
+         int i = 0;
+        boolean encontrado = false;
+        while  (i < produtosDisponiveis.size() && encontrado == false)
+        {
+            Produto p = produtosDisponiveis.get(i);
+            String nomeProduto = p.getNome();
+            if (nomeProduto.equals(nome))
+            {
+                encontrado = true ;
+                p.comprar();
+                if (p.getQuantidade() == 0)
+                produtosDisponiveis.remove (i);
+            }
+            else i++;
+        }
+        return encontrado;
+        
     }
 }
