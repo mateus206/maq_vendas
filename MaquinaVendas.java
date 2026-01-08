@@ -8,7 +8,8 @@ import java.util.ArrayList;
 public class MaquinaVendas
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private String nome;
+    private String  nome;
+    private String utilizador;
     private ArrayList<Produto> produtosDisponiveis;
     
     /**
@@ -19,6 +20,7 @@ public class MaquinaVendas
         // inicializa variáveis de instância
         this.nome = nome;
         this.produtosDisponiveis = produtos;
+        this.utilizador=utilizador;
     }
 
     /**

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Produto
 comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Produto\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
-comment1.params=nome\ preco\ quantidadedisponivel\ img
+comment1.params=nome\ preco\ quantidade_disponivel\ imagem
 comment1.target=Produto(java.lang.String,\ double,\ int,\ java.lang.String)
 comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Produto\r\n
 comment2.params=

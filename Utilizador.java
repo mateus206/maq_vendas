@@ -5,14 +5,14 @@
  * @author (seu nome)
  * @version (uma data ou versão)
  */
-public class utilizador {
+public class Utilizador {
     private String titular;
     private double saldo;
 
     /**
      * Construtor para criar uma conta com titular e saldo inicial zero.
      */
-    public utilizador(String titular) {
+    public Utilizador(String titular) {
         this.titular = titular;
         this.saldo = saldo;
     }
