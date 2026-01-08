@@ -50,6 +50,7 @@ public class MaquinaVendas
     public boolean venderProduto(String nome)
     {
         int i = 0;
+        
         boolean encontrado = false;
         
         while  (i < produtosDisponiveis.size() && encontrado == false)
@@ -62,10 +63,16 @@ public class MaquinaVendas
             {
                 encontrado = true ;
                 
-                p.comprar();
+                boolean compraSucesso = p.comprar();
                 
-                if (p.getQuantidade() == 0)
-                produtosDisponiveis.remove (i);
+                if (compraSucesso == true)
+                {
+                    // retirar saldo ao user
+                    
+                    return true;
+                }
+                
+                return false;
             }
             
             else i++;
