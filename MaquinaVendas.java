@@ -31,7 +31,6 @@ public class MaquinaVendas
     {
         // escreva seu código aqui
         int i = 0;
-        
         boolean encontrado = false;
         
         while  (i < produtosDisponiveis.size() && encontrado == false)
@@ -51,7 +50,6 @@ public class MaquinaVendas
     public boolean venderProduto(String nome)
     {
         int i = 0;
-        
         boolean encontrado = false;
         
         while  (i < produtosDisponiveis.size() && encontrado == false)

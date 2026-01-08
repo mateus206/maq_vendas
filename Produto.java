@@ -14,7 +14,7 @@ public class Produto
     /**
      * Construtor para objetos da classe Produto
      */
-    public Produto(String nome, double preco, int quantidadedisponivel, String img)
+    public Produto(String nome, double preco, int quantidade_disponivel, String imagem)
     {
         // inicializa variáveis de instância
         this.nome = nome;

@@ -1,23 +1,32 @@
-public class Utilizador {
+/**
+ * Classe que representa uma conta bancária.
+ * Permite depósitos, levantamentos e consulta de saldo.
+ * 
+ * @author (seu nome)
+ * @version (uma data ou versão)
+ */
+public class utilizador {
+    private String titular;
     private double saldo;
 
-    public Utilizador(double saldoInicial) {
-        this.saldo = saldoInicial;
+    /**
+     * Construtor para criar uma conta com titular e saldo inicial zero.
+     */
+    public utilizador(String titular) {
+        this.titular = titular;
+        this.saldo = saldo;
     }
 
-    public double getSaldo() { return saldo; }
-
-    public void carregarSaldo(double valor) {
-        if (valor > 0) {
-            this.saldo += valor; 
-        }
+    /**
+     * Retorna o saldo atual da conta.
+     */
+    public double getSaldo() {
+        return saldo;
     }
+    
 
-    public boolean descontarSaldo(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor; 
-            return true;
-        }
-        return false;
-    }
 }
+
+   
+
+  

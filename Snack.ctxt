@@ -4,4 +4,6 @@ comment1.params=nome\ preco\ quantidade\ imagem\ salgado
 comment1.target=Snack(java.lang.String,\ double,\ int,\ java.lang.String,\ boolean)
 comment2.params=
 comment2.target=boolean\ isSalgado()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
