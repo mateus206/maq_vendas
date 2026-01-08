@@ -10,6 +10,7 @@ public class MaquinaVendas
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String nome;
     private ArrayList<Produto> produtosDisponiveis;
+    
     /**
      * Construtor para objetos da classe MaquinaVendas
      */
@@ -30,34 +31,48 @@ public class MaquinaVendas
     {
         // escreva seu código aqui
         int i = 0;
+        
         boolean encontrado = false;
+        
         while  (i < produtosDisponiveis.size() && encontrado == false)
         {
             String nomeProduto = produtosDisponiveis.get(i).getNome();
+            
             if (nomeProduto.equals(nome))
+            
             encontrado = true;
+            
             else i++;
         }
+        
         return encontrado;
     }
     
     public boolean venderProduto(String nome)
     {
-         int i = 0;
+        int i = 0;
+        
         boolean encontrado = false;
+        
         while  (i < produtosDisponiveis.size() && encontrado == false)
         {
             Produto p = produtosDisponiveis.get(i);
+            
             String nomeProduto = p.getNome();
+            
             if (nomeProduto.equals(nome))
             {
                 encontrado = true ;
+                
                 p.comprar();
+                
                 if (p.getQuantidade() == 0)
                 produtosDisponiveis.remove (i);
             }
+            
             else i++;
         }
+        
         return encontrado;
         
     }

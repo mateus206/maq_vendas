@@ -9,18 +9,18 @@ public class Produto
 {
     private String nome;
     private double preco;
-    private int quantidade;
-    private String img;
+    private int quantidade_disponivel;
+    private String imagem;
     /**
      * Construtor para objetos da classe Produto
      */
-    public Produto(String nome, double preco, int qt_disp, String img)
+    public Produto(String nome, double preco, int quantidadedisponivel, String img)
     {
         // inicializa variáveis de instância
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = qt_disp;
-        this.img = img;
+        this.quantidade_disponivel = quantidade_disponivel;
+        this.imagem = imagem;
     }
     
     public String getNome() {
@@ -34,21 +34,23 @@ public class Produto
     
     public int getQuantidade()
     {
-        return quantidade;
+        return quantidade_disponivel;
     }
     
-    public String getimg()
+    public String getimagem()
     {
-        return img;
+        return imagem;
     }
     
     public boolean comprar() {
-        if (quantidade > 0) {
-            quantidade--;
+        if (this.quantidade_disponivel > 0) {
+            this.quantidade_disponivel = this.quantidade_disponivel - 1;
             return true;
         }
         return false;
     }
+    
+    
 }
     
     
