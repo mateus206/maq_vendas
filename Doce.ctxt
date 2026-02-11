@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Doce
-comment1.params=nome\ preco\ quantidade\ imagem
-comment1.target=Doce(java.lang.String,\ double,\ int,\ java.lang.String)
+comment1.params=nome\ preco\ quantidade\ imagem\ acucar
+comment1.target=Doce(java.lang.String,\ double,\ int,\ java.lang.String,\ boolean)
 comment2.params=
 comment2.target=java.lang.String\ toString()
 numComments=3

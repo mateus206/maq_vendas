@@ -1,13 +1,16 @@
-public class Doce extends Produto {
+public class Doce extends Produto 
+{
+    private boolean acucar;
 
-    public Doce(String nome, double preco, int quantidade, String imagem) {
-        // super chama o construtor da classe base Produto 
+    public Doce(String nome, double preco, int quantidade, String imagem, boolean acucar) 
+    {
         super(nome, preco, quantidade, imagem);
+        this.acucar = acucar;
     }
 
     @Override
-    public String toString() {
-        // super.toString() aproveita o nome, preço e quantidade da classe base 
-        return super.toString() + " | Categoria: Doce";
+    public String toString() 
+    {
+        return super.toString() + " | Categoria: Doce | Sabor: " + acucar;
     }
 }

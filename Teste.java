@@ -1,31 +1,43 @@
 import java.util.ArrayList;
-/**
- * Escreva uma descrição da classe Teste aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class Teste
-{
-    public static void main (String[] agrs)
-    {
-            ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
-            Produto p1 = new Produto("sandes mista",2.50,5,"");
-            listaProdutos.add(p1);
-            
-            Produto p2 = new Bebida("fanta",3,4,"");
-            listaProdutos.add(p2);
-            
-            Produto p3 = new Snack("pringles",5.0,6,"",true);
-            listaProdutos.add(p3);
-            
-            MaquinaVendas maquina = new MaquinaVendas("metro saldanha",listaProdutos);
-            
-            Utilizador u1 = new Utilizador("mateus",20);
-            System.out.println(p3.getQuantidade());
-            u1.comprarProduto(maquina,p3);
-            System.out.println(p3.getQuantidade());
-            System.out.println(u1.getSaldo());
+
+public class MaquinaVendasTest {
+    public static void main(String[] args) {
+
+        // Criar utilizador
+        Utilizador user1 = new Utilizador("Mario");
+
+        // Teste carregar saldo
+        user1.carregarSaldo(35.50);
+        System.out.println("Saldo atual: " + user1.getSaldo() + "€\n");
+
+        // Criar produtos
+        ArrayList<Produto> produtos = new ArrayList<>();
+
+        Produto doce1 = new Doce("Mochi", 3.60, 6, "mochi.jpg", true);
+        Produto snack1 = new Snack("Noodles", 4.60, 6, "noodles.jpg", false);
+        Produto bebida1 = new Bebida("Monster Morango", 1.60, 6, "monster.jpg", "Fria");
+
+        produtos.add(doce1);
+        produtos.add(snack1);
+        produtos.add(bebida1);
+
+        MaquinaVendas maquina = new MaquinaVendas("Máquina Loures", produtos, user1);
+
+
+        System.out.println("Existe Mochi? " + maquina.existeProduto("Mochi"));
+
         
+        if (user1.getSaldo() >= doce1.getPreco() && maquina.ComprarProduto("Mochi")) {
+            user1.descontarSaldo(doce1.getPreco());
+            System.out.println("Compra de Mochi bem-sucedida!");
+            System.out.println("Saldo restante: " + user1.getSaldo() + "€");
+        }
+
+        
+        System.out.println("\nEsgotando o stock de Monster:");
+        while (maquina.ComprarProduto("Monster Morango")) {
+            user1.descontarSaldo(bebida1.getPreco());
+            System.out.println("Compra realizada. Stock restante: " + bebida1.getquantidade());
+        }
     }
 }
